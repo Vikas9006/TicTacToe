@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: url(../images/neon-background.jpg);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    /* background: linear-gradient(rgb(170, 236, 170), rgb(119, 119, 116)); */
+    background-color: yellow;
+    width: 90vmin;
+    height: 92vmin;
+    /* border: 2px solid #3a76e4; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 5px;
+    animation: winningAnimation 0.002ms infinite;
+}
+
+.cell{
+    border: 1px solid #3a76e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#cell-1,#cell-2,#cell-3{
+    border-top: none;
+}
+
+#cell-1,#cell-4,#cell-7{
+    border-left: none;
+}
+
+#cell-3,#cell-6,#cell-9{
+    border-right: none;
+}
+
+#cell-7,#cell-8,#cell-9{
+    border-bottom: none;
+}
+
+.cell:hover{
+    background: blue;
+}
+
+#term{
+    background-color: snow;
+    position: absolute;
+    top: 4px;
+}
+/* 
+.winningLine{
+    animation: winningAnimation 1s infinite;
+    position: absolute;
+} */
+
+
+
